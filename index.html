@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Navideño 2030</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<style>
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    .font-display {
+        font-family: 'Ubuntu Condensed', sans-serif;
+    }
+    /* Animación de Nieve */
+    .snowflake {
+        position: fixed;
+        top: -10vh;
+        z-index: 50;
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        animation-name: fall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        pointer-events: none;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(105vh);
+        }
+    }
+
+    /* Animación para el botón del carrito */
+    @keyframes shake {
+      10%, 90% { transform: translate3d(-1px, 0, 0) scale(1.1); }
+      20%, 80% { transform: translate3d(2px, 0, 0) scale(1.1); }
+      30%, 50%, 70% { transform: translate3d(-4px, 0, 0) scale(1.1); }
+      40%, 60% { transform: translate3d(4px, 0, 0) scale(1.1); }
+    }
+    .shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
